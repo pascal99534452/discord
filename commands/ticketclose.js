@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
     // Id van category van tickets.
-    const categoryId = "685146833118429273";
+    const categoryId = "637680800736870410";
 
     // Als bericht in ticket kanaal is dan verwijder kanaal ander zend bericht
     if (message.channel.parentID == categoryId) {
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor('#009999');
 
     // Vind kanaal voor de logs.
-    var logChannel = message.guild.channels.find("name", "logs");
+    var logChannel = message.guild.channels.find("name", "⛔・logs");
     if (!logChannel) return message.channel.send("Kanaal bestaat niet");
 
     logChannel.send(embedCloseTicket);

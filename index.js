@@ -57,7 +57,7 @@ bot.on("message", async message => {
 });
 bot.on("guildMemberAdd", member => {
 
-   const channel = member.guild.channels.find("name", "unitedmc");
+   const channel = member.guild.channels.find("name", "u");
    if (!channel) console.log("Dit kanaal bestaat niet");
 
    var joinMessage = new discord.RichEmbed()

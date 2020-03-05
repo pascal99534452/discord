@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Reden:", reason)
     .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
 
-    var banChannel = message.guild.channels.find(`name`, "logs");
+    var banChannel = message.guild.channels.find(`name`, "⛔・logs");
     if (!banChannel) return message.guild.send("Kan het kanaal niet vinden! :frowning:")
 
     message.guild.member(banUser).ban(reason);

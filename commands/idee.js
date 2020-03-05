@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
         .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1') .setTimestamp();
  
     // Vind het kanaal.
-    var ideeChannel = message.guild.channels.find(`name`, "idee");
+    var ideeChannel = message.guild.channels.find(`name`, "👀・suggesties");
     if (!ideeChannel) return message.guild.send("Kan het kanaal niet vinden");
  
     // Verzend het bericht en voeg er reacties aan toe.
