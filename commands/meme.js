@@ -3,13 +3,6 @@ const { cyan } = require("../../colours.json");
 const fetch = require('node-fetch');
 
 module.exports = { 
-    config: {
-        name: "meme",
-        description: "Stuur een meme",
-        usage: "!meme",
-        category: "miscellaneous",
-        accessableby: "Members",
-    },
     run: async (bot, message, args) => {
     let msg = await message.channel.send("Generating...")
 
@@ -27,4 +20,9 @@ module.exports = {
             msg.delete();
         })
     }
+}
+
+module.exports.help = {
+    name: "meme",
+    description: "Maak een ticket aan"
 }
