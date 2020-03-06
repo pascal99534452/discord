@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     var userDiscriminator = message.author.discriminator;
 
     // Als ticket al gemaakt is
-    var bool = false;
+    var bool = true;
 
     // Kijk na als ticket al gemaakt is.
     message.guild.channels.forEach((channel) => {
@@ -80,5 +80,4 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: "ticket",
-    description: "Maak een ticket aan"
 }
