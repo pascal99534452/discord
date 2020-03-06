@@ -5,8 +5,8 @@ module.exports.run = async (bot, message, args) => {
     var botIcon = bot.user.displayAvatarURL
 
     var botEmbed = new discord.RichEmbed()
-        .setTitle("UnitedMC")
-        .addField("Auke:", "Stinkt naar ")
+        .setTitle("AUKUHH")
+        .setDescription("Auke is gay :)")
         .setThumbnail(botIcon)
         .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1') .setTimestamp() 
         .setColor('#009999');
@@ -16,5 +16,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-name: "ip"
+name: "auke"
 }
