@@ -1,25 +1,19 @@
-const { RichEmbed } = require("discord.js")
-const fetch = require('node-fetch');
+const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let msg = await message.channel.send("Generating...")
 
-    fetch("https://apis.duncte123.me/meme")
-    .then(res => res.json()).then(body => {
-        if(!body) return message.reply("Oeps! Het werkt even niet, probeer het opnieuw!")
+    var botIcon = bot.user.displayAvatarURL
 
-        let mEmbed = new RichEmbed()
+    var botEmbed = new discord.RichEmbed()
         .setColor('#009999')
         .setTitle("Memes! :joy:")
-        .setImage(body.data.image)
+        .setImage(`https://apis.duncte123.me/meme`)
         .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
 
-            message.channel.send(mEmbed)
-            msg.delete();
-        })
+    return message.channel.send(botEmbed);
+
 }
 
 module.exports.help = {
-    name: "meme",
-    description: "Maak een ticket aan"
+    name: "meme"
 }
