@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
     args = args.join(" ").split(splitser);
 
     if (args[2] == undefined) args[2] = "#009999"
-    if (args[3] == undefined) args[3] = "idee"
+    if (args[3] == undefined) args[3] = "💼・staffchat"
 
     var options = {
 
