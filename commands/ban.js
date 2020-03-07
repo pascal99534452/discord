@@ -7,11 +7,10 @@ module.exports.run = async (bot, message, args) => {
     if(!banUser) return message.channel.send(":no_entry: | Voer alle argumenten in!")
 
     var reason = args.join(" ").slice(22);
-    message.channel.send("Je hebt " + banUser + " Gebanned.")
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry: | Jij hebt geen toegang tot dit commando!");
 
     if(banUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry: | Jij kan geen staffleden verbannen!");
-    
+    var bann = message.channel.send("Je hebt " + banUser + " Gebanned.")
     var ban = new discord.RichEmbed()
     .setTitle("Ban Systeem")
     .setColor("#009999")
@@ -25,8 +24,8 @@ module.exports.run = async (bot, message, args) => {
 
     message.guild.member(banUser).ban(reason);
 
-    banChannel.send(ban)
-
+    banChannel.send(ban, bann)
+ 
     return;
 }
 
