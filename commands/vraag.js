@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    if(!args[2]) return message.reply("BAM");
     let replies = [
         'Ik weet het niet zeker',
 	    'Misschien wel.',
@@ -31,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("8Ball")
     .setColor('#009999')
     .addField("Vraag:", question)
-    .addField("Antwoord:", replies[result])
+    .addField("Antwoord:", replies)
     .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1') .setTimestamp() 
 
     message.channel.send({embed});
