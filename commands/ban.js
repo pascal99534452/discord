@@ -1,35 +1,23 @@
 const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+    if (!message.member.roles.some(r => ["Administrator"].includes(r.name)))
+        return message.reply("Sorry, you don't have permissions to use this!");
 
-    var banUser = message.guild.member(message.mentions.users.first() || message.guild.member(arguments[0]));
+    let member = message.mentions.members.first();
+    if (!member)
+        return message.reply("Please mention a valid member of this server");
+    if (!member.bannable)
+        return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
 
-    if(!banUser) return message.channel.send(":no_entry: | Voer alle argumenten in!")
+    let reason = args.slice(1).join(' ');
+    if (!reason) reason = "No reason provided";
 
-    var reason = args.join(" ").slice(22);
-    message.channel.send("Je hebt " + banUser + " Gebanned.")
-    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry: | Jij hebt geen toegang tot dit commando!");
-
-    if(banUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry: | Jij kan geen staffleden verbannen!");
-    
-    var ban = new discord.RichEmbed()
-    .setTitle("Ban Systeem")
-    .setColor("#009999")
-    .addField("Speler:", banUser)
-    .addField("Gebanned door:", message.author)
-    .addField("Reden:", reason)
-    .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
-
-    var banChannel = message.guild.channels.find(`name`, "⛔・logs");
-    if (!banChannel) return message.guild.send("Kan het kanaal niet vinden! :frowning:")
-
-    message.guild.member(banUser).ban(reason);
-
-    banChannel.send(ban)
-
-    return;
+    await member.ban(reason)
+        .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
+    message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
 }
 
 module.exports.help = {
-name: "ban"
+    name: "auke"
 }
