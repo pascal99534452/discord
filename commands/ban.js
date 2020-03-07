@@ -1,21 +1,38 @@
 const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    if (!message.member.roles.some(r => ["💼 ・Beheerder"].includes(r.name)))
-        return message.reply("Sorry, you don't have permissions to use this!");
+    if (banUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry: | Jij kan geen staffleden verbannen!");
 
+    var banChannel = message.guild.channels.find(`name`, "⛔・logs");
     let member = message.mentions.members.first();
+    var message = new discord.RichEmbed()
+        .setTitle("Ban Systeem")
+        .setColor("#009999")
+        .addField("Speler:", member)
+        .addField("Gebanned door:", message.author)
+        .addField("Reden:", reason)
+        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
+
+    var bann = new discord.RichEmbed()
+        .setTitle("Ban Systeem")
+        .setColor("#009999")
+        .addField("Speler:", member)
+        .addField("Gebanned door:", message.author)
+        .addField("Reden:", reason)
+        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
+
     if (!member)
-        return message.reply("Please mention a valid member of this server");
+        return message.reply(":no_entry: | Voer alle argumenten in!");
     if (!member.bannable)
-        return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
+        return message.reply(":no_entry: | Ik kan deze persoon niet verbannen");
 
     let reason = args.slice(1).join(' ');
-    if (!reason) reason = "No reason provided";
+    if (!reason) reason = "Geen reden gevonden";
 
     await member.ban(reason)
-        .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
-    message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
+        .catch(error => message.reply(`Sorry ${message.author}, Er is een error gevonden: ${error}`));
+    message.channel.send(message)
+    banChannel.send(bann)
 }
 
 module.exports.help = {
