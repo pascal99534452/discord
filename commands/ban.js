@@ -27,7 +27,8 @@ module.exports.run = async (bot, message, args) => {
 
     message.guild.member(banUser).ban(reason);
 
-    banChannel.send(ban, bann)
+    banChannel.send(ban)
+    banChannel.send(bann)
 
     return;
 }
