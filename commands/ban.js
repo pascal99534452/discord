@@ -1,7 +1,6 @@
 const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    if (member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry: | Jij kan geen staffleden verbannen!");
 
     var banChannel = message.guild.channels.find(`name`, "⛔・logs");
     let member = message.mentions.members.first();
@@ -21,6 +20,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Reden:", reason)
         .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
 
+    if (member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry: | Jij kan geen staffleden verbannen!");
     if (!member)
         return message.reply(":no_entry: | Voer alle argumenten in!");
     if (!member.bannable)
