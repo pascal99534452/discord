@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    if (!message.member.roles.some(r => ["Administrator"].includes(r.name)))
+    if (!message.member.roles.some(r => ["💼 ・Beheerder"].includes(r.name)))
         return message.reply("Sorry, you don't have permissions to use this!");
 
     let member = message.mentions.members.first();
@@ -19,5 +19,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "auke"
+    name: "ban"
 }
