@@ -7,8 +7,6 @@ module.exports.run = async (bot, message, args) => {
 
     if (!message.member.roles.some(r => ["💼 ・Beheerder", "", "", ""].includes(r.name)))
         return message.reply(":no_entry: | Jij hebt geen toegang tot dit commando!");
-
-    let member = message.mentions.members.first();
     if (!member)
         return message.reply(":no_entry: | Je moet wel een speler kiezen die je wilt verbannen!");
     if (!member.bannable)
