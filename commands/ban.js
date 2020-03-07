@@ -17,17 +17,24 @@ module.exports.run = async (bot, message, args) => {
 
     await member.ban(reason)
         .catch(error => message.reply(`Sorry ${message.author} Ik kan deze persoon niet bannen: ${error}`));
-    message.reply(`**STAFF** ・ ${member.user.tag} is verbannen door: ${message.author.tag} voor: ${reason}`);
 
     var bann = new discord.RichEmbed()
-        .setTitle("Ban Systeem")
+        .setTitle("Ban Systeem")    
         .setColor("#009999")
         .addField("Speler:", member)
         .addField("Gebanned door:", message.author)
         .addField("Reden:", reason)
         .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
 
+        var bannn = new discord.RichEmbed()
+        .setTitle("Ban Systeem")    
+        .setColor("#009999")
+        .addField("Speler:", member)
+        .addField("Gebanned door:", message.author)
+        .addField("Reden:", reason)
+        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
     banChannel.send(bann)
+    message.channel.send(bannn)
 }
 
 module.exports.help = {
