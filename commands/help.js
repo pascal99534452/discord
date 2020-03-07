@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
     var botEmbed = new discord.RichEmbed()
         .setTitle("Help - UnitedMC")
-        .setDescription("**!members** - Laat het aantal server leden zien! \n **!ip** - Laat het minecraft ip zien! \n **!botinfo** - Laat informatie zien van de bot! \n **!auke** - Command voor de lol haha! \n **!ban** - Verban een gebruiker! \n **!kick** - Verwijder een gebruiker! \n **!warn** - Waarschuw een gebruiker! \n **!ticket** - Maak een prive kanaal aan met staffleden! \n **!close** - Sluit een ticket! \n **!serverinfo** - Laat informatie zien van de discord server! \n **!avatar** - Laat je discord profiel foto zien! \n **!idee** - Plaat een idee! \n **!clear** - Verwijder berichten! \n **!melding** - Plaats een melding!")
+        .setDescription("**!members** - Laat het aantal server leden zien! \n **!ip** - Laat het minecraft ip zien! \n **!botinfo** - Laat informatie zien van de bot! \n **!auke** - Command voor de lol haha! \n **!ban** - Verban een gebruiker! \n **!kick** - Verwijder een gebruiker! \n **!ticket** - Maak een prive kanaal aan met staffleden! \n **!close** - Sluit een ticket! \n **!serverinfo** - Laat informatie zien van de discord server! \n **!avatar** - Laat je discord profiel foto zien! \n **!idee** - Plaat een idee! \n **!clear** - Verwijder berichten! \n **!melding** - Plaats een melding! \n **!8ball** - Stel een vraag en de bot reageerd [FUN]! \n **!say** - Laat de bot een bericht zeggen! \n **!flip** - Speel kop of munt! \n **!rps** - Speel Steen papier schaar!")
         .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1') .setTimestamp() 
         .setColor('#009999');
 
