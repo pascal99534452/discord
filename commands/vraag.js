@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("8Ball")
     .setColor('#009999')
     .addField("Vraag:", question)
-    .addField("Antwoord:", doMagic8BallVoodoo());
+    .addField("Antwoord:", doMagic8BallVoodoo())
     .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1') .setTimestamp() 
 
     message.channel.send({embed});
