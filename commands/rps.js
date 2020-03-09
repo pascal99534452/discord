@@ -36,12 +36,12 @@ module.exports.run = async (bot, message, args) => {
 
     // if their choices are same its a draw :D
     if (computer_choice == user_choice) {
-      message.reply(gelijkspell);
+      message.channel.send(gelijkspell);
     }
     else if (computer_choice < user_choice || computer_choice == 0 && user_choice == 2) {
-      message.reply(verlorenn);
+      message.channel.send(verlorenn);
     } else {
-      message.reply(gewonnenn);
+      message.channel.send(gewonnenn);
     }
   }
 
