@@ -78,4 +78,5 @@ if (!role) return;
 
 member.addRole(role);
 });
+
 bot.login(process.env.token);
