@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Bot Naam", bot.user.username)
         .setThumbnail(botIcon)
         .addField("Gemaakt op:", bot.user.createdAt)
-        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1') .setTimestamp() 
+        .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp()
         .setColor('#009999');
 
     return message.channel.send(botEmbed);

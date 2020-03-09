@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
     var embedCreateTicket = new discord.RichEmbed()
         .setTitle("Ticket Systeem")
         .setDescription("Je hebt een ticket aangemaakt, Een stafflid helpt je zo snel mogelijk!")
-        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
+        .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp()
         .setColor('#009999');
 
     message.channel.send(embedCreateTicket)
@@ -64,7 +64,7 @@ module.exports.run = async (bot, message, args) => {
             var embedParent = new discord.RichEmbed()
                 .setTitle("Ticket Systeem")
                 .setDescription("Zet hier je bericht in, Een stafflid helpt je zo snel mogelijk!")
-                .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
+                .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp()
                 .setColor('#009999');
 
             settedParent.send(embedParent);

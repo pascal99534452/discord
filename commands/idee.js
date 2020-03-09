@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Idee:", idee)
         .addField("Ingezonden door:", message.author)
         .setColor('#009999')
-        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1') .setTimestamp();
+        .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp();
  
     // Vind het kanaal.
     var ideeChannel = message.guild.channels.find(`name`, "👀・suggesties");

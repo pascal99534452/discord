@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Speler:", member)
         .addField("Gebanned door:", message.author)
         .addField("Reden:", reason)
-        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
+        .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp();
 
         var bannn = new discord.RichEmbed()
         .setTitle("Ban Systeem")    
@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Speler:", member)
         .addField("Gebanned door:", message.author)
         .addField("Reden:", reason)
-        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
+        .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp();
     banChannel.send(bann)
     message.channel.send(bannn)
 }

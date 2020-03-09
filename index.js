@@ -63,7 +63,7 @@ bot.on("guildMemberAdd", member => {
    var joinMessage = new discord.RichEmbed()
       .setTitle(`Welkom  ${member.user.tag}!`)
       .setDescription("Veel plezier op onze discord server.")
-      .setFooter('User joined', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
+      .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp()
       .setColor('#009999')
       .setThumbnail(member.user.displayAvatarURL);
 

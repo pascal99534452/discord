@@ -12,8 +12,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("**Server Naam:**", `${message.guild.name}`, true)
     .addField("**Server Eigenaar:**", `${message.guild.owner}`, true)
     .addField("**Aantal Leden:**", `${message.guild.memberCount}`, true)
-    .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1') .setTimestamp();
-
+    .setFooter('PredatorDesigns', 'https://imgur.com/a/EgRCeTh') .setTimestamp();
     return message.channel.send(botEmbed);
 
 }

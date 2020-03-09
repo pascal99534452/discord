@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("Ticket Systeem")
         .addField("Ticket maker:", message.channel.name)
         .addField("Gesloten door:", message.author)
-        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
+        .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp()
         .setColor('#009999');
 
     // Vind kanaal voor de logs.
