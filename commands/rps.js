@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
       .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
       .setColor('#009999');
 
-    var argss = new discord.RichEmbed()
+    var fout = new discord.RichEmbed()
       .setTitle('**Steen, papier, schaar!**')
       .setDescription('Gebruik: !rps steen , papier , schaar! :slight_smile: ')
       .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) => {
   }
 
   if (!args[0]) {
-    message.reply(argss);
+    message.channel.send(fout)
   }
 }
 
