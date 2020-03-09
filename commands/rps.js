@@ -1,4 +1,4 @@
-const discord = module.require("discord.js");
+const Discord = module.require("discord.js");
 
 function rand(low, high) {
   return Math.random() * (high + 1 - low) + low | 0;
@@ -25,9 +25,9 @@ module.exports.run = async (bot, message, args) => {
       .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
       .setColor('#009999');
 
-    var argumenten = new discord.RichEmbed()
+    var argss = new discord.RichEmbed()
       .setTitle('**Steen, papier, schaar!**')
-      .setDescription('Gebruik: !rps steen , papier , schaar! :slight_smile: ')
+      .setDescription('Gebruik: !rps! :slight_smile: ')
       .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
       .setColor('#009999');
 
@@ -37,17 +37,17 @@ module.exports.run = async (bot, message, args) => {
 
     // if their choices are same its a draw :D
     if (computer_choice == user_choice) {
-      message.channel.send(gelijkspell);
+      message.reply(gelijkspell);
     }
     else if (computer_choice < user_choice || computer_choice == 0 && user_choice == 2) {
-      message.channel.send(verlorenn);
+      message.reply(verlorenn);
     } else {
-      message.channel.send(gewonnenn);
+      message.reply(gewonnenn);
     }
   }
 
   if (!args[0]) {
-    message.channel.send(argumenten);
+    message.reply("!rps steen/papier/schaar");
   }
 }
 
