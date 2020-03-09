@@ -25,11 +25,12 @@ module.exports.run = async (bot, message, args) => {
       .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
       .setColor('#009999');
 
-    var fout = new discord.RichEmbed()
+    var argumenten = new discord.RichEmbed()
       .setTitle('**Steen, papier, schaar!**')
       .setDescription('Gebruik: !rps steen , papier , schaar! :slight_smile: ')
       .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
       .setColor('#009999');
+
     // get user choice && user choice
     let computer_choice = rand(0, 2);
     let user_choice = args[0] == "rock" ? 1 : args[0] == "paper" ? 2 : 0;
@@ -46,7 +47,7 @@ module.exports.run = async (bot, message, args) => {
   }
 
   if (!args[0]) {
-    message.channel.send(fout)
+    message.channel.send(argumenten);
   }
 }
 
