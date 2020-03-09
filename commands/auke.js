@@ -1,8 +1,6 @@
 const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    var member = message.member.user.tag;
-    
     var botEmbed = new discord.RichEmbed()
         .setTitle('**AUKUHH**')
         .setDescription('Auke stinkt')
