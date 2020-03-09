@@ -30,7 +30,7 @@ bot.on("ready", async () => {
 
    console.log(`${bot.user.username} is online!`)
 
-   bot.user.setActivity("PredatorDesigns", { type: "PLAYING" });
+   bot.user.setActivity("play.unitedmc.nl", { type: "PLAYING" });
 
 })
 
@@ -63,7 +63,7 @@ bot.on("guildMemberAdd", member => {
    var joinMessage = new discord.RichEmbed()
       .setTitle(`Welkom  ${member.user.tag}!`)
       .setDescription("Veel plezier op onze discord server.")
-      .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp()
+      .setFooter('User joined', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp()
       .setColor('#009999')
       .setThumbnail(member.user.displayAvatarURL);
 
@@ -78,5 +78,4 @@ if (!role) return;
 
 member.addRole(role);
 });
-
-bot.login(VUXXOMnOa7pdSEvLsFbeTWV90LejQc-A);
+bot.login(process.env.token);

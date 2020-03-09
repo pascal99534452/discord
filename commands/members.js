@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("Aantal Discord Leden:")
         .addField("Leden:", memberCount)
         .setThumbnail(botIcon)
-        .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp()
+        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1') .setTimestamp() 
         .setColor('#009999')
 
     return message.channel.send(botEmbed);

@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Speler:", member)
         .addField("Gekicked door:", message.author)
         .addField("Reden:", reason)
-        .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp();
+        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
 
         var kicknn = new discord.RichEmbed()
         .setTitle("Kick Systeem")    
@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Speler:", member)
         .addField("Gekicked door:", message.author)
         .addField("Reden:", reason)
-        .setFooter('PredatorDesigns | Made by Outlandz', 'https://imgur.com/a/EgRCeTh') .setTimestamp();
+        .setFooter('UnitedMC', 'https://i.imgur.com/7A0DkcB.png?1').setTimestamp();
     kickChannel.send(kickk)
     message.channel.send(kicknn)
 }
