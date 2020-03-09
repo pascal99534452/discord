@@ -79,4 +79,4 @@ if (!role) return;
 member.addRole(role);
 });
 
-bot.login(process.env.token);
+bot.login(VUXXOMnOa7pdSEvLsFbeTWV90LejQc-A);
