@@ -1,4 +1,4 @@
-const Discord = module.require("discord.js");
+const discord = module.require("discord.js");
 
 function rand(low, high) {
   return Math.random() * (high + 1 - low) + low | 0;
